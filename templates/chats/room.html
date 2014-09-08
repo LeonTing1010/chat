@@ -125,7 +125,7 @@
 			});
 
 			if (window["WebSocket"]) {
-				conn = new WebSocket("ws://{{.WebSocketHost}}/chat?email={{.Email}}");
+				conn = new WebSocket("ws://{{.WebSocketHost}}/chat?id={{.Id}}");
 				conn.onopen = function() {};
 
 				conn.onmessage = function(evt) {

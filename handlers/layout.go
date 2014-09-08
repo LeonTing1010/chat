@@ -17,7 +17,10 @@ func (p *provider) LayoutData(env Env) interface{} {
 }
 
 func LayoutAndRenderer() (l Middleware, r Middleware) {
-	tpl, err := template.ParseGlob("templates/*/*.html")
+	tpl, err := template.ParseGlob("src/chatour/templates/*/*.html")
+	// v := template.New("templates")
+	// tpl, err := v.ParseFiles("chats/home.html", "chats/index.html", "chats/room.html", "layout/main.html")
+	// tpl, err := v.ParseGlob("*/*.html")
 	if err != nil {
 		panic(err)
 	}
