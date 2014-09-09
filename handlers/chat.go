@@ -98,7 +98,7 @@ func Join(env Env) (status Status, headers Headers, body Body) {
 		env.Logger().Println("Send a ", r.Method, "response body", body)
 		// 存入cookie,使用cookie存储
 		cookie := http.Cookie{Name: "userId", Value: dbUser.Email, Path: "/"}
-		http.SetCookie(w, &cookie)
+		env.Request().AddCookie(&cookie)
 		return
 	}
 	result, _ := json.Marshal(Result{Code: 1002, Info: "user not register or password wrong", Host: r.Host})
