@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"chatour/util"
+	"chat/util"
 	"encoding/json"
 	. "github.com/paulbellamy/mango"
 	"labix.org/v2/mgo"

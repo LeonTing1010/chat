@@ -1,8 +1,8 @@
 package main
 
 import (
-	"chatour/handlers"
-	"chatour/wscon"
+	"chat/handlers"
+	"chat/wscon"
 	"code.google.com/p/go.net/websocket"
 	. "github.com/paulbellamy/mango"
 	"net/http"
